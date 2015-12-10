@@ -1,0 +1,62 @@
+html { box-sizing: border-box; }
+*, *:before, *:after { box-sizing: inherit; }
+h2 {
+  text-align:center;
+}
+.container {
+  width:80%;
+  margin:30px auto 60px auto;
+  border:1px solid black;
+  padding:10px;
+  text-align:center;
+}
+.kast {
+  background:#ff6;
+  width:33.33333%;
+  padding:10px;
+}
+
+/* float example */
+#float-test .kast {
+  padding:10px;
+  border-right:1px solid black;
+  float:left;
+}
+#float-test .kast:last-of-type {
+  border:none;
+}
+#float-test:after {
+  content: "";
+ /* display: table;*/
+  clear: both;
+}
+
+#float-test { overflow: hidden; }
+
+/*inline-block example*/
+#inlineblock-test .kast {
+  display:inline-block;
+  border-right:1px solid black;
+  vertical-align:top;
+}
+#inlineblock-test .kast:last-of-type {
+  text-align:center;
+  display:inline-block;
+  border:none;
+}
+
+/* flexbox example */
+#flexbox {
+	display: flex;
+	flex-direction: row; /*row | row-reverse | column | column-reverse;*/
+	flex-wrap: nowrap; /*nowrap | wrap | wrap-reverse;*/
+	justify-content: space-between; /*flex-start | flex-end | center | space-between | space-around;*/
+	align-items: stretch; /*flex-start | flex-end | center | baseline | stretch;*/
+}
+
+#flexbox .kast {
+	border-right:1px solid black;
+}
+#flexbox .kast:last-of-type {
+	border:none;
+}
